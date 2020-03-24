@@ -1,0 +1,25 @@
+---
+title: "week9_shiny"
+author: "Dana Tomeh"
+date: "3/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Rstudio API Code 
+```{r}
+library(rstudioapi)
+setwd(dirname(getActiveDocumentContext()$path))
+```
+
+# Libraries
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(shiny)
+```
+
