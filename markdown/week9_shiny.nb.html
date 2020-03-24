@@ -1773,11 +1773,47 @@ setwd(dirname(getActiveDocumentContext()$path))</code></pre>
 <p>#Libraries</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzaGlueSlcbmxpYnJhcnkodGlkeXZlcnNlKVxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
-<pre class="r"><code>library(shiny)
-library(tidyverse)
-library(lubridate)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzaGlueSlcbmBgYCJ9 -->
+<pre class="r"><code>library(shiny)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdodG1sdG9vbHMnOlxuICBtZXRob2QgICAgICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWwgICAgICAgICAgIHRvb2xzOnJzdHVkaW9cbiAgcHJpbnQuc2hpbnkudGFnICAgICAgdG9vbHM6cnN0dWRpb1xuICBwcmludC5zaGlueS50YWcubGlzdCB0b29sczpyc3R1ZGlvXG4ifQ== -->
+<pre><code>Registered S3 methods overwritten by &#39;htmltools&#39;:
+  method               from         
+  print.html           tools:rstudio
+  print.shiny.tag      tools:rstudio
+  print.shiny.tag.list tools:rstudio</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2RwbHlyJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tXG4gIHByaW50LnJvd3dpc2VfZGYgICAgIFxuUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuXHUwMDFiWzM3beKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4zLjAg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzM3bVx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1nZ3Bsb3QyXHUwMDFiWzM3bSAzLjIuMSAgICAgXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzdtIDAuMy4zXG5cdTAwMWJbMzJt4pyTXHUwMDFiWzM3bSBcdTAwMWJbMzRtdGliYmxlIFx1MDAxYlszN20gMi4xLjMgICAgIFx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1kcGx5ciAgXHUwMDFiWzM3bSAwLjguNFxuXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bXRpZHlyICBcdTAwMWJbMzdtIDEuMC4yICAgICBcdTAwMWJbMzJt4pyTXHUwMDFiWzM3bSBcdTAwMWJbMzRtc3RyaW5nclx1MDAxYlszN20gMS40LjBcblx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1yZWFkciAgXHUwMDFiWzM3bSAxLjMuMSAgICAgXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bWZvcmNhdHNcdTAwMWJbMzdtIDAuNC4wXHUwMDFiWzM5bVxuXHUwMDFiWzM3beKUgOKUgCBcdTAwMWJbMW1Db25mbGljdHNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG5cdTAwMWJbMzFteFx1MDAxYlszN20gXHUwMDFiWzM0bWRwbHlyXHUwMDFiWzM3bTo6XHUwMDFiWzMybWZpbHRlcigpXHUwMDFiWzM3bSBtYXNrcyBcdTAwMWJbMzRtc3RhdHNcdTAwMWJbMzdtOjpmaWx0ZXIoKVxuXHUwMDFiWzMxbXhcdTAwMWJbMzdtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszN206Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszN20gICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzM3bTo6bGFnKClcdTAwMWJbMzltXG4ifQ== -->
+<pre><code>Registered S3 method overwritten by &#39;dplyr&#39;:
+  method           from
+  print.rowwise_df     
+Registered S3 methods overwritten by &#39;dbplyr&#39;:
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+[37m── [1mAttaching packages[22m ───────────────────────────────────── tidyverse 1.3.0 ──[39m
+[37m[32m✓[37m [34mggplot2[37m 3.2.1     [32m✓[37m [34mpurrr  [37m 0.3.3
+[32m✓[37m [34mtibble [37m 2.1.3     [32m✓[37m [34mdplyr  [37m 0.8.4
+[32m✓[37m [34mtidyr  [37m 1.0.2     [32m✓[37m [34mstringr[37m 1.4.0
+[32m✓[37m [34mreadr  [37m 1.3.1     [32m✓[37m [34mforcats[37m 0.4.0[39m
+[37m── [1mConflicts[22m ──────────────────────────────────────── tidyverse_conflicts() ──
+[31mx[37m [34mdplyr[37m::[32mfilter()[37m masks [34mstats[37m::filter()
+[31mx[37m [34mdplyr[37m::[32mlag()[37m    masks [34mstats[37m::lag()[39m</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
+<pre class="r"><code>library(lubridate)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
+<pre><code>
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Data Import and Cleaning</p>
@@ -1805,19 +1841,22 @@ cols(
   q10 = [32mcol_double()[39m
 )</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yX3NoaW55IDwtIHdlZWs5X3RibCAlPiVcbiAgbXV0YXRlKHRpbWVTdGFydCA9IHltZF9obXModGltZVN0YXJ0KSxcbiAgICAgICAgIGdlbmRlcj1mYWN0b3IoZ2VuZGVyLGxldmVscz1jKFwiTVwiLFwiRlwiKSxsYWJlbHM9YyhcIk1hbGVcIixcIkZlbWFsZVwiKSksXG4gICAgICAgICBjb25kaXRpb249ZmFjdG9yKGNvbmRpdGlvbixsZXZlbHM9YyhcIkFcIixcIkJcIixcIkNcIiksbGFiZWxzPWMoXCJCbG9jayBBXCIsXCJCbG9jayBCXCIsXCJDb250cm9sXCIpKSxcbiAgICAgICAgIFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLCBcbiAgICAgICAgIFE2UTEwbWVhbnM9cm93TWVhbnMod2VlazlfdGJsWzEwOjE0XSkpXG5gYGAifQ== -->
-<pre class="r"><code>for_shiny &lt;- week9_tbl %&gt;%
-  mutate(timeStart = ymd_hms(timeStart),
-         gender=factor(gender,levels=c(&quot;M&quot;,&quot;F&quot;),labels=c(&quot;Male&quot;,&quot;Female&quot;)),
-         condition=factor(condition,levels=c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;),labels=c(&quot;Block A&quot;,&quot;Block B&quot;,&quot;Control&quot;)),
-         Q1Q5means =rowMeans(week9_tbl[5:9]), 
-         Q6Q10means=rowMeans(week9_tbl[10:14]))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0FkZGluZyBtZWFucyB2YXJpYWJsZXNcbmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lXG4gIG11dGF0ZSh0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpLFxuICAgICAgICAgUTFRNW1lYW5zID1yb3dNZWFucyh3ZWVrOV90YmxbNTo5XSksXG4gICAgICAgICBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pKSAlPiVcbiAgZmlsdGVyKHE2PT0xKVxuXG5zYXZlUkRTKGZvcl9zaGlueV90YmwsIFwiLi4vc2hpbnkvd2Vlazlfc2hpbnkvZm9yX3NoaW55LnJkc1wiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>#Adding means variables
+for_shiny_tbl &lt;- week9_tbl%&gt;%
+  mutate(timeStart=ymd_hms(timeStart),
+         Q1Q5means =rowMeans(week9_tbl[5:9]),
+         Q6Q10means=rowMeans(week9_tbl[10:14])) %&gt;%
+  filter(q6==1)
+
+saveRDS(for_shiny_tbl, &quot;../shiny/week9_shiny/for_shiny.rds&quot;)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocnN0dWRpb2FwaSkKc2V0d2QoZGlybmFtZShnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSkKYGBgCgoKCiNMaWJyYXJpZXMKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYGBgCgoKCiNEYXRhIEltcG9ydCBhbmQgQ2xlYW5pbmcgCmBgYHtyfQp3ZWVrOV90YmwgPC1hc190aWJibGUocmVhZF9jc3YoIi4uL2RhdGEvd2VlazMuY3N2IikpCiNBZGRpbmcgbWVhbnMgdmFyaWFibGVzCmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lCiAgbXV0YXRlKFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLCBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pLCB0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpKQoKc2F2ZVJEUyhmb3Jfc2hpbnlfdGJsLCAiLi4vd2Vlazlfc2hpbnkvZm9yX3NoaW55LnJkcyIpCgpgYGAKCgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocnN0dWRpb2FwaSkKc2V0d2QoZGlybmFtZShnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSkKYGBgCgoKCiNMaWJyYXJpZXMKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYGBgCgoKCiNEYXRhIEltcG9ydCBhbmQgQ2xlYW5pbmcgCmBgYHtyfQp3ZWVrOV90YmwgPC1hc190aWJibGUocmVhZF9jc3YoIi4uL2RhdGEvd2VlazMuY3N2IikpCiNBZGRpbmcgbWVhbnMgdmFyaWFibGVzCmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lCiAgbXV0YXRlKHRpbWVTdGFydD15bWRfaG1zKHRpbWVTdGFydCksCiAgICAgICAgIFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLAogICAgICAgICBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pKSAlPiUKICBmaWx0ZXIocTY9PTEpCgpzYXZlUkRTKGZvcl9zaGlueV90YmwsICIuLi9zaGlueS93ZWVrOV9zaGlueS9mb3Jfc2hpbnkucmRzIikKCmBgYAoKCgoK</div>
 
 
 

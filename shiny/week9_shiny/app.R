@@ -24,7 +24,7 @@ ui <- fluidPage(
         
         mainPanel(
             plotOutput("scatterPlot"),
-            DT::dataTableOutput("table")
+           DT::dataTableOutput("table")
         )
     )
 )
