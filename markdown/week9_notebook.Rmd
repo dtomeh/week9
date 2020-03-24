@@ -37,3 +37,9 @@ ggplot(week9_tbl_clean, aes(Q1Q5means, Q6Q10means))+
        title="Mean of Q1 to Q5 versus Mean of Q6 to Q10")
 ```
 
+Analysis 
+```{r}
+mean_cor <- cor.test(week9_tbl_clean$Q1Q5means, week9_tbl_clean$Q6Q10means)
+mean_cor$estimate
+mean_cor$p.value
+```
