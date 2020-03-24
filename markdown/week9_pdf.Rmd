@@ -14,9 +14,32 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("/Volumes/GoogleDrive/My Drive/Classes/2019-2020 (Third Year)/Spring 2020/Data Science/Week 9/week9")
 ```
 
-# Libraries
+ **Libraries**
 ```{r, message=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(lubridate)
 ```
+
+ **Data Import**
+```{r}
+week9_tbl <-as_tibble(read_csv("../data/week3.csv")) %>%
+  mutate(Q1Q5means =rowMeans(week9_tbl[5:9]), Q6Q10means=rowMeans(week9_tbl[10:14]))
+```
+*data imported as a tibble 
+*Column Q1Q5means was added that contains the means of the responses on Q1 to Q5  for each person in the dataset
+*Column Q6Q10means was added that contains the means of the responses on Q6 to Q10  for each person in the dataset
+
+**Visualization**
+```{r, echo=FALSE}
+ggplot(week9_tbl_2, aes(Q1Q5means, Q6Q10means))+
+  geom_point() + 
+  geom_smooth(method="lm", se=FALSE)
+```
+This plot contains the means of questions 1 through 5 plotted against the means of questions 6 through ten. 
+
+**Analysis**
+```{r}
+cor.test(week9_tbl_2$Q1Q5means, week9_tbl_2$Q6Q10means)
+```
+The correlation was -.14 (p>.05), which is not statistically significant.
