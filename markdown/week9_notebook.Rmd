@@ -27,5 +27,13 @@ week9_tbl_clean <- week9_tbl %>%
          Q6Q10means=rowMeans(week9_tbl[10:14])) %>%
   filter(q6==1)
 ```
-
+Visualization 
+```{r}
+ggplot(week9_tbl_clean, aes(Q1Q5means, Q6Q10means))+
+  geom_point() + 
+  geom_smooth(method="lm", se=FALSE)+
+  labs(x="Mean of Q1 to Q5",
+       y="Mean of Q6 to Q10",
+       title="Mean of Q1 to Q5 versus Mean of Q6 to Q10")
+```
 
