@@ -5,14 +5,10 @@ date: "3/23/2020"
 output: html_document
 ---
 
+# Rstudio API Code 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Rstudio API Code 
-```{r}
-library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))
+setwd("/Volumes/GoogleDrive/My Drive/Classes/2019-2020 (Third Year)/Spring 2020/Data Science/Week 9/week9")
 ```
 
 # Libraries
@@ -36,6 +32,6 @@ for_shiny_tbl <- week9_tbl %>%
 ```
 # Save as RDS to prepare for shiny app
 ```{r}
-saveRDS(for_shiny_tbl, "../week9_shiny/for_shiny.rds")
+saveRDS(for_shiny_tbl, "../shiny/week9_shiny/for_shiny.rds")
 ```
 
