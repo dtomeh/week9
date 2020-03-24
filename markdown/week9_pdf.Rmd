@@ -14,18 +14,22 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("/Volumes/GoogleDrive/My Drive/Classes/2019-2020 (Third Year)/Spring 2020/Data Science/Week 9/week9")
 ```
 
- **Libraries**
+# Libraries
 ```{r, include=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(lubridate)
 ```
 
- **Data Import**
+# Data Import
  
- *data imported as a tibble 
-*Column Q1Q5means was added that contains the means of the responses on Q1 to Q5  for each person in the dataset
-*Column Q6Q10means was added that contains the means of the responses on Q6 to Q10  for each person in the dataset
++data imported as a tibble 
++ timeStart was converted to posixCT
++ gender was converted to a factor
++ condition was converted to a factor
++Column Q1Q5means was added that contains the means of the responses on Q1 to Q5  for each person in the dataset
++Column Q6Q10means was added that contains the means of the responses on Q6 to Q10  for each person in the dataset
++filtered for q6==1
 ```{r}
 week9_tbl <- as_tibble(read_csv("../data/week3.csv"))
   
@@ -39,7 +43,7 @@ week9_tbl_clean <- week9_tbl %>%
 ```
 
 
-**Visualization**
+# Visualization
 ```{r, echo=FALSE}
 ggplot(week9_tbl_clean, aes(Q1Q5means, Q6Q10means))+
   geom_point() + 
@@ -50,7 +54,7 @@ ggplot(week9_tbl_clean, aes(Q1Q5means, Q6Q10means))+
 ```
 This plot contains the means of questions 1 through 5 plotted against the means of questions 6 through ten. 
 
-**Analysis**
+# Analysis
 ```{r}
 mean_cor <- cor.test(week9_tbl_clean$Q1Q5means, week9_tbl_clean$Q6Q10means)
 mean_cor$estimate
