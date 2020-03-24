@@ -1,37 +1,35 @@
 ---
-title: "week9_shiny"
-author: "Dana Tomeh"
-date: "3/23/2020"
-output: html_document
+title: "R Notebook"
+output: html_notebook
 ---
 
-# Rstudio API Code 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-setwd("/Volumes/GoogleDrive/My Drive/Classes/2019-2020 (Third Year)/Spring 2020/Data Science/Week 9/week9")
+```{r}
+library(rstudioapi)
+setwd(dirname(getActiveDocumentContext()$path))
 ```
 
-# Libraries
+
+
+#Libraries
 ```{r}
+library(shiny)
 library(tidyverse)
 library(lubridate)
-library(ggplot2)
-library(shiny)
 ```
 
-# Data Import and Cleaning
+
+
+#Data Import and Cleaning 
 ```{r}
 week9_tbl <-as_tibble(read_csv("../data/week3.csv"))
+#Adding means variables
+for_shiny_tbl <- week9_tbl%>%
+  mutate(Q1Q5means =rowMeans(week9_tbl[5:9]), Q6Q10means=rowMeans(week9_tbl[10:14]), timeStart=ymd_hms(timeStart))
 
-for_shiny_tbl <- week9_tbl %>%
-  mutate(timeStart = ymd_hms(timeStart),
-         gender=factor(gender,levels=c("M","F"),labels=c("Male","Female")),
-         condition=factor(condition,levels=c("A","B","C"),labels=c("Block A","Block B","Control")),
-         Q1Q5means =rowMeans(week9_tbl[5:9]), 
-         Q6Q10means=rowMeans(week9_tbl[10:14]))
+saveRDS(for_shiny_tbl, "../week9_shiny/for_shiny.rds")
+
 ```
-# Save as RDS to prepare for shiny app
-```{r}
-saveRDS(for_shiny_tbl, "../shiny/week9_shiny/for_shiny.rds")
-```
+
+
+
 

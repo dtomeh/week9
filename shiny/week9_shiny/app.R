@@ -1,3 +1,6 @@
+library(rstudioapi)
+setwd(dirname(getActiveDocumentContext()$path))
+
 #Libraries
 library(shiny)
 library(ggplot2)
@@ -30,7 +33,7 @@ server <- function(input, output) {
     
     #Filter data so that plot and table will adjust accordingly
     filtered_data <- reactive({
-        data <- for_shiny_tbl
+        data <- readRDS("for_shiny.rds")
         if (input$preAugust){
             data <- subset(data,
                            timeEnd > as.Date("2017-08-01"))
