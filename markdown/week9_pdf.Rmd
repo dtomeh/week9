@@ -1,0 +1,22 @@
+---
+title: "week9"
+author: "Dana Tomeh"
+date: "3/22/2020"
+output: pdf_document
+params:
+    output_dir: "../output"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../output") })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("/Volumes/GoogleDrive/My Drive/Classes/2019-2020 (Third Year)/Spring 2020/Data Science/Week 9/week9")
+```
+
+# Libraries
+```{r, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
