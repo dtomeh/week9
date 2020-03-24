@@ -12,5 +12,20 @@ Libraries
 ```{r}
 library(tidyverse)
 library(ggplot2)
+library(lubridate)
 ```
+
+Data Import 
+```{r}
+week9_tbl <- as_tibble(read_csv("../data/week3.csv"))
+  
+week9_tbl_clean <- week9_tbl %>%
+  mutate(timeStart=ymd_hms(timeStart),
+         gender=factor(gender,levels=c("M","F"),labels=c("Male","Female")),
+         condition=factor(condition,levels=c("A","B","C"), labels=c("Block A","Block B","Control")),
+         Q1Q5means =rowMeans(week9_tbl[5:9]),
+         Q6Q10means=rowMeans(week9_tbl[10:14])) %>%
+  filter(q6==1)
+```
+
 
