@@ -1,13 +1,8 @@
 ---
 title: "R Notebook"
 output: html_notebook
+runtime: shiny
 ---
-
-```{r}
-library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))
-```
-
 
 
 #Libraries
@@ -22,16 +17,17 @@ library(lubridate)
 #Data Import and Cleaning 
 ```{r}
 week9_tbl <-as_tibble(read_csv("../data/week3.csv"))
+
 #Adding means variables
 for_shiny_tbl <- week9_tbl%>%
-  mutate(timeStart=ymd_hms(timeStart),
-         Q1Q5means =rowMeans(week9_tbl[5:9]),
-         Q6Q10means=rowMeans(week9_tbl[10:14])) %>%
-  filter(q6==1)
+    mutate(Q1Q5means =rowMeans(week9_tbl[5:9]), Q6Q10means=rowMeans(week9_tbl[10:14]), timeStart=ymd_hms(timeStart)) %>%
+    subset(q6==1)
 
 saveRDS(for_shiny_tbl, "../shiny/week9_shiny/for_shiny.rds")
 
 ```
+
+
 
 
 

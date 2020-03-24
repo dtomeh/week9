@@ -2,7 +2,7 @@
 title: "week9"
 author: "Dana Tomeh"
 date: "3/22/2020"
-output: pdf_document
+output: word_document
 params:
     output_dir: "../output"
 knit: (function(inputFile, encoding) {

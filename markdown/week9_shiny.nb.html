@@ -1764,17 +1764,14 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyc3R1ZGlvYXBpKVxuc2V0d2QoZGlybmFtZShnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSlcbmBgYCJ9 -->
-<pre class="r"><code>library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Libraries</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzaGlueSlcbmBgYCJ9 -->
-<pre class="r"><code>library(shiny)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzaGlueSlcblxuYGBgIn0= -->
+<pre class="r"><code>library(shiny)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdodG1sdG9vbHMnOlxuICBtZXRob2QgICAgICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWwgICAgICAgICAgIHRvb2xzOnJzdHVkaW9cbiAgcHJpbnQuc2hpbnkudGFnICAgICAgdG9vbHM6cnN0dWRpb1xuICBwcmludC5zaGlueS50YWcubGlzdCB0b29sczpyc3R1ZGlvXG4ifQ== -->
 <pre><code>Registered S3 methods overwritten by &#39;htmltools&#39;:
@@ -1819,8 +1816,9 @@ The following object is masked from ‘package:base’:
 <p>#Data Import and Cleaning</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VlazlfdGJsIDwtYXNfdGliYmxlKHJlYWRfY3N2KFwiLi4vZGF0YS93ZWVrMy5jc3ZcIikpXG5gYGAifQ== -->
-<pre class="r"><code>week9_tbl &lt;-as_tibble(read_csv(&quot;../data/week3.csv&quot;))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VlazlfdGJsIDwtYXNfdGliYmxlKHJlYWRfY3N2KFwiLi4vZGF0YS93ZWVrMy5jc3ZcIikpXG5cbmBgYCJ9 -->
+<pre class="r"><code>week9_tbl &lt;-as_tibble(read_csv(&quot;../data/week3.csv&quot;))
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICB0aW1lU3RhcnQgPSBcdTAwMWJbMzFtY29sX2NoYXJhY3RlcigpXHUwMDFiWzM5bSxcbiAgdGltZUVuZCA9IFx1MDAxYlszNG1jb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIilcdTAwMWJbMzltLFxuICBjb25kaXRpb24gPSBcdTAwMWJbMzFtY29sX2NoYXJhY3RlcigpXHUwMDFiWzM5bSxcbiAgZ2VuZGVyID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIHExID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHEyID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHEzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE0ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE1ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE2ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE3ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE4ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE5ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHExMCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltXG4pXG4ifQ== -->
 <pre><code>Parsed with column specification:
@@ -1841,22 +1839,16 @@ cols(
   q10 = [32mcol_double()[39m
 )</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0FkZGluZyBtZWFucyB2YXJpYWJsZXNcbmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lXG4gIG11dGF0ZSh0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpLFxuICAgICAgICAgUTFRNW1lYW5zID1yb3dNZWFucyh3ZWVrOV90YmxbNTo5XSksXG4gICAgICAgICBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pKSAlPiVcbiAgZmlsdGVyKHE2PT0xKVxuXG5zYXZlUkRTKGZvcl9zaGlueV90YmwsIFwiLi4vc2hpbnkvd2Vlazlfc2hpbnkvZm9yX3NoaW55LnJkc1wiKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0FkZGluZyBtZWFucyB2YXJpYWJsZXNcbmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lXG4gIG11dGF0ZShRMVE1bWVhbnMgPXJvd01lYW5zKHdlZWs5X3RibFs1OjldKSwgUTZRMTBtZWFucz1yb3dNZWFucyh3ZWVrOV90YmxbMTA6MTRdKSwgdGltZVN0YXJ0PXltZF9obXModGltZVN0YXJ0KSlcbmBgYCJ9 -->
 <pre class="r"><code>#Adding means variables
 for_shiny_tbl &lt;- week9_tbl%&gt;%
-  mutate(timeStart=ymd_hms(timeStart),
-         Q1Q5means =rowMeans(week9_tbl[5:9]),
-         Q6Q10means=rowMeans(week9_tbl[10:14])) %&gt;%
-  filter(q6==1)
-
-saveRDS(for_shiny_tbl, &quot;../shiny/week9_shiny/for_shiny.rds&quot;)
-</code></pre>
+  mutate(Q1Q5means =rowMeans(week9_tbl[5:9]), Q6Q10means=rowMeans(week9_tbl[10:14]), timeStart=ymd_hms(timeStart))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocnN0dWRpb2FwaSkKc2V0d2QoZGlybmFtZShnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSkKYGBgCgoKCiNMaWJyYXJpZXMKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYGBgCgoKCiNEYXRhIEltcG9ydCBhbmQgQ2xlYW5pbmcgCmBgYHtyfQp3ZWVrOV90YmwgPC1hc190aWJibGUocmVhZF9jc3YoIi4uL2RhdGEvd2VlazMuY3N2IikpCiNBZGRpbmcgbWVhbnMgdmFyaWFibGVzCmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lCiAgbXV0YXRlKHRpbWVTdGFydD15bWRfaG1zKHRpbWVTdGFydCksCiAgICAgICAgIFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLAogICAgICAgICBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pKSAlPiUKICBmaWx0ZXIocTY9PTEpCgpzYXZlUkRTKGZvcl9zaGlueV90YmwsICIuLi9zaGlueS93ZWVrOV9zaGlueS9mb3Jfc2hpbnkucmRzIikKCmBgYAoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkocnN0dWRpb2FwaSkKc2V0d2QoZGlybmFtZShnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSkKYGBgCgoKCiNMaWJyYXJpZXMKYGBge3J9CmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYGBgCgoKCiNEYXRhIEltcG9ydCBhbmQgQ2xlYW5pbmcgCmBgYHtyfQp3ZWVrOV90YmwgPC1hc190aWJibGUocmVhZF9jc3YoIi4uL2RhdGEvd2VlazMuY3N2IikpCiNBZGRpbmcgbWVhbnMgdmFyaWFibGVzCmZvcl9zaGlueV90YmwgPC0gd2VlazlfdGJsJT4lCiAgbXV0YXRlKFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLCBRNlExMG1lYW5zPXJvd01lYW5zKHdlZWs5X3RibFsxMDoxNF0pLCB0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpKSAlPiUKICBmaWx0ZXIocTY9PTEpCgpzYXZlUkRTKGZvcl9zaGlueV90YmwsICIuLi9zaGlueS93ZWVrOV9zaGlueS9mb3Jfc2hpbnkucmRzIikKCmBgYAoKCgoK</div>
 
 
 
