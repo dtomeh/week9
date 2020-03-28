@@ -1,29 +1,5 @@
-# library(rstudioapi)
-# setwd(dirname(getActiveDocumentContext()$path))
-# 
-# #Libraries
-# library(shiny)
-# library(ggplot2)
-
-library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))
-
-#Libraries
 library(shiny)
 library(tidyverse)
-library(ggplot2)
-library(lubridate)
-
-#Data Import and Cleaning 
-week9_tbl <-as_tibble(read_csv("../data/week3.csv"))
-
-#Adding means variables
-for_shiny_tbl <- week9_tbl%>%
-    mutate(Q1Q5means =rowMeans(week9_tbl[5:9]), Q6Q10means=rowMeans(week9_tbl[10:14]), timeStart=ymd_hms(timeStart)) %>%
-    subset(q6==1)
-
-saveRDS(for_shiny_tbl, "../week9_shiny/for_shiny.rds")
-
 
 #creating the UI 
 

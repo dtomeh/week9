@@ -1775,75 +1775,27 @@ summary {
 <p>Data Import</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VlazlfdGJsIDwtIGFzX3RpYmJsZShyZWFkX2NzdihcIi4uL2RhdGEvd2VlazMuY3N2XCIpKVxuXG5gYGAifQ== -->
-<pre class="r"><code>week9_tbl &lt;- as_tibble(read_csv(&quot;../data/week3.csv&quot;))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZVJEUyhzYXZlUkRTKGZvcl9zaGlueV90YmwsIFwiLi4vc2hpbnkvd2Vlazlfc2hpbnkvZm9yX3NoaW55XzIucmRzXCIpKVxuXG5gYGAifQ== -->
+<pre class="r"><code>saveRDS(saveRDS(for_shiny_tbl, &quot;../shiny/week9_shiny/for_shiny_2.rds&quot;))
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICB0aW1lU3RhcnQgPSBcdTAwMWJbMzFtY29sX2NoYXJhY3RlcigpXHUwMDFiWzM5bSxcbiAgdGltZUVuZCA9IFx1MDAxYlszNG1jb2xfZGF0ZXRpbWUoZm9ybWF0ID0gXCJcIilcdTAwMWJbMzltLFxuICBjb25kaXRpb24gPSBcdTAwMWJbMzFtY29sX2NoYXJhY3RlcigpXHUwMDFiWzM5bSxcbiAgZ2VuZGVyID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIHExID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHEyID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHEzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE0ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE1ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE2ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE3ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE4ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHE5ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHExMCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltXG4pXG4ifQ== -->
-<pre><code>Parsed with column specification:
-cols(
-  timeStart = [31mcol_character()[39m,
-  timeEnd = [34mcol_datetime(format = &quot;&quot;)[39m,
-  condition = [31mcol_character()[39m,
-  gender = [31mcol_character()[39m,
-  q1 = [32mcol_double()[39m,
-  q2 = [32mcol_double()[39m,
-  q3 = [32mcol_double()[39m,
-  q4 = [32mcol_double()[39m,
-  q5 = [32mcol_double()[39m,
-  q6 = [32mcol_double()[39m,
-  q7 = [32mcol_double()[39m,
-  q8 = [32mcol_double()[39m,
-  q9 = [32mcol_double()[39m,
-  q10 = [32mcol_double()[39m
-)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gc2F2ZVJEUyhzYXZlUkRTKGZvcl9zaGlueV90YmwsIFwiLi4vc2hpbnkvd2Vlazlfc2hpbnkvZm9yX3NoaW55XzIucmRzXCIpKSA6IFxuICAnZmlsZScgbXVzdCBiZSBub24tZW1wdHkgc3RyaW5nXG4ifQ== -->
+<pre><code>Error in saveRDS(saveRDS(for_shiny_tbl, &quot;../shiny/week9_shiny/for_shiny_2.rds&quot;)) : 
+  &#39;file&#39; must be non-empty string</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbndlZWs5X3RibF9jbGVhbiA8LSB3ZWVrOV90YmwgJT4lXG4gIG11dGF0ZSh0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpLFxuICAgICAgICAgZ2VuZGVyPWZhY3RvcihnZW5kZXIsbGV2ZWxzPWMoXCJNXCIsXCJGXCIpLGxhYmVscz1jKFwiTWFsZVwiLFwiRmVtYWxlXCIpKSxcbiAgICAgICAgIGNvbmRpdGlvbj1mYWN0b3IoY29uZGl0aW9uLGxldmVscz1jKFwiQVwiLFwiQlwiLFwiQ1wiKSwgbGFiZWxzPWMoXCJCbG9jayBBXCIsXCJCbG9jayBCXCIsXCJDb250cm9sXCIpKSxcbiAgICAgICAgIFExUTVtZWFucyA9cm93TWVhbnMod2VlazlfdGJsWzU6OV0pLFxuICAgICAgICAgUTZRMTBtZWFucz1yb3dNZWFucyh3ZWVrOV90YmxbMTA6MTRdKSkgJT4lXG4gIGZpbHRlcihxNj09MSlcbmBgYCJ9 -->
-<pre class="r"><code>  
-week9_tbl_clean &lt;- week9_tbl %&gt;%
-  mutate(timeStart=ymd_hms(timeStart),
-         gender=factor(gender,levels=c(&quot;M&quot;,&quot;F&quot;),labels=c(&quot;Male&quot;,&quot;Female&quot;)),
-         condition=factor(condition,levels=c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;), labels=c(&quot;Block A&quot;,&quot;Block B&quot;,&quot;Control&quot;)),
-         Q1Q5means =rowMeans(week9_tbl[5:9]),
-         Q6Q10means=rowMeans(week9_tbl[10:14])) %&gt;%
-  filter(q6==1)</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Visualization</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KHdlZWs5X3RibF9jbGVhbiwgYWVzKFExUTVtZWFucywgUTZRMTBtZWFucykpK1xuICBnZW9tX3BvaW50KCkgKyBcbiAgZ2VvbV9zbW9vdGgobWV0aG9kPVwibG1cIiwgc2U9RkFMU0UpK1xuICBsYWJzKHg9XCJNZWFuIG9mIFExIHRvIFE1XCIsXG4gICAgICAgeT1cIk1lYW4gb2YgUTYgdG8gUTEwXCIsXG4gICAgICAgdGl0bGU9XCJNZWFuIG9mIFExIHRvIFE1IHZlcnN1cyBNZWFuIG9mIFE2IHRvIFExMFwiKVxuYGBgIn0= -->
-<pre class="r"><code>ggplot(week9_tbl_clean, aes(Q1Q5means, Q6Q10means))+
-  geom_point() + 
-  geom_smooth(method=&quot;lm&quot;, se=FALSE)+
-  labs(x=&quot;Mean of Q1 to Q5&quot;,
-       y=&quot;Mean of Q6 to Q10&quot;,
-       title=&quot;Mean of Q1 to Q5 versus Mean of Q6 to Q10&quot;)</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Analysis</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbl9jb3IgPC0gY29yLnRlc3Qod2VlazlfdGJsX2NsZWFuJFExUTVtZWFucywgd2VlazlfdGJsX2NsZWFuJFE2UTEwbWVhbnMpXG5tZWFuX2NvciRlc3RpbWF0ZVxuXG5gYGAifQ== -->
-<pre class="r"><code>mean_cor &lt;- cor.test(week9_tbl_clean$Q1Q5means, week9_tbl_clean$Q6Q10means)
-mean_cor$estimate
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgY29yIFxuLTAuMTAwODkxIFxuIn0= -->
-<pre><code>      cor 
--0.100891 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbl9jb3IkcC52YWx1ZVxuYGBgIn0= -->
-<pre class="r"><code>mean_cor$p.value</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNTA0Njc2NFxuIn0= -->
-<pre><code>[1] 0.5046764</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpSIFN0dWRpbyBBUEkgQ29kZQpgYGB7cn0KbGlicmFyeShyc3R1ZGlvYXBpKQpzZXR3ZChkaXJuYW1lKGdldEFjdGl2ZURvY3VtZW50Q29udGV4dCgpJHBhdGgpKQpgYGAKCkxpYnJhcmllcwpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZ2dwbG90MikKbGlicmFyeShsdWJyaWRhdGUpCmBgYAoKRGF0YSBJbXBvcnQgCmBgYHtyfQp3ZWVrOV90YmwgPC0gYXNfdGliYmxlKHJlYWRfY3N2KCIuLi9kYXRhL3dlZWszLmNzdiIpKQogIAp3ZWVrOV90YmxfY2xlYW4gPC0gd2VlazlfdGJsICU+JQogIG11dGF0ZSh0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpLAogICAgICAgICBnZW5kZXI9ZmFjdG9yKGdlbmRlcixsZXZlbHM9YygiTSIsIkYiKSxsYWJlbHM9YygiTWFsZSIsIkZlbWFsZSIpKSwKICAgICAgICAgY29uZGl0aW9uPWZhY3Rvcihjb25kaXRpb24sbGV2ZWxzPWMoIkEiLCJCIiwiQyIpLCBsYWJlbHM9YygiQmxvY2sgQSIsIkJsb2NrIEIiLCJDb250cm9sIikpLAogICAgICAgICBRMVE1bWVhbnMgPXJvd01lYW5zKHdlZWs5X3RibFs1OjldKSwKICAgICAgICAgUTZRMTBtZWFucz1yb3dNZWFucyh3ZWVrOV90YmxbMTA6MTRdKSkgJT4lCiAgZmlsdGVyKHE2PT0xKQpgYGAKVmlzdWFsaXphdGlvbiAKYGBge3J9CmdncGxvdCh3ZWVrOV90YmxfY2xlYW4sIGFlcyhRMVE1bWVhbnMsIFE2UTEwbWVhbnMpKSsKICBnZW9tX3BvaW50KCkgKyAKICBnZW9tX3Ntb290aChtZXRob2Q9ImxtIiwgc2U9RkFMU0UpKwogIGxhYnMoeD0iTWVhbiBvZiBRMSB0byBRNSIsCiAgICAgICB5PSJNZWFuIG9mIFE2IHRvIFExMCIsCiAgICAgICB0aXRsZT0iTWVhbiBvZiBRMSB0byBRNSB2ZXJzdXMgTWVhbiBvZiBRNiB0byBRMTAiKQpgYGAKCkFuYWx5c2lzIApgYGB7cn0KbWVhbl9jb3IgPC0gY29yLnRlc3Qod2VlazlfdGJsX2NsZWFuJFExUTVtZWFucywgd2VlazlfdGJsX2NsZWFuJFE2UTEwbWVhbnMpCm1lYW5fY29yJGVzdGltYXRlCm1lYW5fY29yJHAudmFsdWUKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpSIFN0dWRpbyBBUEkgQ29kZQpgYGB7cn0KbGlicmFyeShyc3R1ZGlvYXBpKQpzZXR3ZChkaXJuYW1lKGdldEFjdGl2ZURvY3VtZW50Q29udGV4dCgpJHBhdGgpKQpgYGAKCkxpYnJhcmllcwpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZ2dwbG90MikKbGlicmFyeShsdWJyaWRhdGUpCmxpYnJhcnkoc2hpbnkpCmBgYAoKRGF0YSBJbXBvcnQgCmBgYHtyfQp3ZWVrOV90YmwgPC0gYXNfdGliYmxlKHJlYWRfY3N2KCIuLi9kYXRhL3dlZWszLmNzdiIpKQogIAp3ZWVrOV90YmxfY2xlYW4gPC0gd2VlazlfdGJsICU+JQogIG11dGF0ZSh0aW1lU3RhcnQ9eW1kX2htcyh0aW1lU3RhcnQpLAogICAgICAgICBnZW5kZXI9ZmFjdG9yKGdlbmRlcixsZXZlbHM9YygiTSIsIkYiKSxsYWJlbHM9YygiTWFsZSIsIkZlbWFsZSIpKSwKICAgICAgICAgY29uZGl0aW9uPWZhY3Rvcihjb25kaXRpb24sbGV2ZWxzPWMoIkEiLCJCIiwiQyIpLCBsYWJlbHM9YygiQmxvY2sgQSIsIkJsb2NrIEIiLCJDb250cm9sIikpLAogICAgICAgICBRMVE1bWVhbnMgPXJvd01lYW5zKHdlZWs5X3RibFs1OjldKSwKICAgICAgICAgUTZRMTBtZWFucz1yb3dNZWFucyh3ZWVrOV90YmxbMTA6MTRdKSkgJT4lCiAgZmlsdGVyKHE2PT0xKQpgYGAKVmlzdWFsaXphdGlvbiAKYGBge3J9CmdncGxvdCh3ZWVrOV90YmxfY2xlYW4sIGFlcyhRMVE1bWVhbnMsIFE2UTEwbWVhbnMpKSsKICBnZW9tX3BvaW50KCkgKyAKICBnZW9tX3Ntb290aChtZXRob2Q9ImxtIiwgc2U9RkFMU0UpKwogIGxhYnMoeD0iTWVhbiBvZiBRMSB0byBRNSIsCiAgICAgICB5PSJNZWFuIG9mIFE2IHRvIFExMCIsCiAgICAgICB0aXRsZT0iTWVhbiBvZiBRMSB0byBRNSB2ZXJzdXMgTWVhbiBvZiBRNiB0byBRMTAiKQpgYGAKCkFuYWx5c2lzIApgYGB7cn0KbWVhbl9jb3IgPC0gY29yLnRlc3Qod2VlazlfdGJsX2NsZWFuJFExUTVtZWFucywgd2VlazlfdGJsX2NsZWFuJFE2UTEwbWVhbnMpCm1lYW5fY29yJGVzdGltYXRlCm1lYW5fY29yJHAudmFsdWUKYGBgCg==</div>
 
 
 
